@@ -11,6 +11,8 @@ RUN apt-get install -qqy python git-core
 RUN git clone https://github.com/RuudBurger/CouchPotatoServer.git /opt/CouchPotatoServer
 
 VOLUME /mnt/config
+VOLUME /mnt/local
+VOLUME /mnt/nas
 
 ADD ./start.sh /start.sh
 RUN chmod u+x  /start.sh
